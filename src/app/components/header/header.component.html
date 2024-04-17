@@ -1,3 +1,12 @@
-<mat-toolbar class="toolbar" color="primary">
-  <span>Header</span>
-</mat-toolbar>
+<div class="header">
+  <div class="content">
+    Company Name
+  </div>
+  <mat-toolbar color="primary" class="toolbar" class="header-nav">
+    <!-- Navigation buttons -->
+    <button mat-button routerLink="/home" routerLinkActive="active-link">Home</button>
+    <button mat-button routerLink="/about" routerLinkActive="active-link">About</button>
+    <button mat-button routerLink="/services" routerLinkActive="active-link">Services</button>
+    <button mat-button routerLink="/contact" routerLinkActive="active-link">Contact</button>
+  </mat-toolbar>
+</div>
