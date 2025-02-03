@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: HomePageComponent,
+    component: AboutPageComponent,
     canActivate: []
   },
   {
