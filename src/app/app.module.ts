@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component'
+import { NgOptimizedImage } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
@@ -30,6 +32,9 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatIconModule,
+    NgOptimizedImage,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule

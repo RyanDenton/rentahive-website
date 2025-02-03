@@ -1,1 +1,59 @@
-<p>contact-page works!</p>
+<div class="contact-container">
+  <h2 class="heading">Contact Us</h2>
+
+  <div class="form-map-container">
+    <!-- Form container -->
+    <div class="form-container">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput id="name" formControlName="name"  />
+            <mat-error *ngIf="isSubmitted && f['name']?.errors?.['required']">
+              Name is required.
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput id="email" formControlName="email"  type="email" />
+            <mat-error *ngIf="isSubmitted && f['email']?.errors?.['email']">
+              Enter a valid email.
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Subject</mat-label>
+            <input matInput id="subject" formControlName="subject"  />
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="textarea">
+            <mat-label>Message</mat-label>
+            <textarea matInput id="message" formControlName="message" ></textarea>
+            <mat-error *ngIf="isSubmitted && f['message']?.errors?.['maxlength']">
+              Message is too long.
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <button mat-raised-button color="accent" class="submit-button" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- First Map Container -->
+    <div class="map-container">
+      <h3>Our Location</h3>
+      <div id="map1" style="width: 100%; height: 300px;"></div>
+    </div>
+  </div>
+
+  <div *ngIf="isSuccess">Your message was sent successfully!</div>
+  <div *ngIf="isError">Something went wrong. Please try again.</div>
+</div>
